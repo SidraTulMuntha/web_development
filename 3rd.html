@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>FIRST PAGE </title>
+        <style>
+            /* using id selector */
+            #fname,#mail,p,#myfile,#birthday {
+size: 80;
+margin: 10px;
+            }
+            #describe{
+                size: 100px;
+                margin: 10px;
+            }
+            body{
+                background-color: antiquewhite;
+            }
+        </style>
+    </head>
+    <body>
+        <h2><center>Enter Your Details ....</center></h2>
+        <form action ="/action_page.php">
+            <center>
+            <!--Taking name and name form the user -->
+            <lable for="fname">NAME : </lable><br>
+            <input type="text" id="fname" name="fname" value="Enter your name "><br>
+            <label for="mail"> E-mail : </label><br>
+            <input type="text" id ="mail" name="mail" value="Your mail"><br>
+
+            <!--Using downdrop option -->
+<p>Select Your Gender : </p><select>
+<option selected>Female</option>
+<option>Male</option>
+<option>Others</option></select>
+
+<!--Using radio option to select only one option-->
+<p>Select Your Field :</p>
+<input type="radio" name ="option"checked>B-tech
+<input type="radio" name ="option">B-pharm
+<input type="radio" name ="option">MBA
+<input type="radio" name ="option">B.Design
+<input type="radio" name ="option">B.voc
+
+<!--Using checkbox to select more than one option -->
+<p>Select Your Branch </p>
+<input type="checkbox" name="branch" checked>CSE
+<input type="checkbox" name="branch">EE
+<input type="checkbox" name="branch">CE
+<input type="checkbox" name="branch">ME<br>
+<p>Select Your Year </p>
+<input type="checkbox" name="year" checked>1st
+<input type="checkbox" name="year">2nd
+<input type="checkbox" name="year">3rd
+<input type="checkbox" name="year">4th<br>
+
+<!--text box to write a sentence or paragraph-->
+Your Hobbies :  <br>
+<textarea rows=5 cols=40>Tell about your passion </textarea><br>
+
+<!--Using date to show calander -->
+<label for="birthday">Birthday:</label>
+  <input type="date" id="birthday" name="birthday"><br>
+  <!--Using file type to upload a file-->
+  <lable for="myfile">Uplaod Your 12th Mark Sheet</lable><br>
+  <input type="file" id ="myfile" name="file" ><br>
+  <!-- submit and reset button type-->
+  <input type="submit" value="Submit">
+  <input type="reset" value="reset">
+</center>
+        </form>
+    </body>
+</html>
