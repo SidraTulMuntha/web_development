@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            p{
+                border:3px solid black;
+                /*An outline is a line that is drawn around element , outside the border */
+                outline:#4CAF50 solid 10px;
+                margin:auto;
+                padding:20px;
+                text-align: center;
+            }
+            .dotted{outline-style: dotted; outline-width: 3px;margin:auto;}
+            .dashes{outline-style: dashed;outline-width: 3px;margin:auto;}
+            .solid{outline-style: solid;outline-width: 3px;margin:auto;}
+            .double{outline-style: double;outline-width: 3px;margin:auto;}
+            .groove{outline-style: groove;outline-width: 3px;margin:auto;}
+            .ridge{outline-style: ridge;outline-width: 3px;margin:auto;}
+            p.inset{outline-style:inset;outline-width: 3px;margin:auto;}
+            .outset{outline-style: outset;outline-width: 3px;margin:auto;}
+            .pro{margin: 30px; border:1px solid black ; outline: 1px solid red;outline-offset: 10px;}
+        </style>
+    </head>
+    <body>
+        <h2>CSS OUTLINE</h2>
+        <p>This Element has a 2px black border and a green outline with a width of 10px </p><br>
+        <p class="dotted">A Dotted outline</p><br>
+        <p class="dashes">A dashed outline</p><br>
+        <p class="solid">A Solid Outline</p><br>
+        <p class="double">A Doubled outline</p><br>
+        <p class="groove">A groove outline . the effect depend upon the outline color. </p><br>
+        <p class="ridge">A ridge outline . the effect depend upon the outline color.</p><br>
+        <p class="inset">An inset outline . the effect depend upon the outline color.</p><br>
+        <p class="outset">An outset outline . the effect depend upon the outline color.</p><br>
+        <p class="pro">This paragraph has an outline of 15px outside the border edge .</p>
+    </body>
+</html>
