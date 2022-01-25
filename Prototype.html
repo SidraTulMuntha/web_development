@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+    <h2  id="myhead">this is a heading having class elemnet </h2>
+    <h3 id="myfirst" class="no">this is another heading with class element </h3>
+    <p class="no">this a paragraph</p>
+    </div>
+    <button onclick="myfunc()">Try it</button>
+    <ul class="this">
+        <li class="childul">this</li>
+        <li class="childul">is</li>
+        <li class="childul">a</li>
+        <li class="childul">list</li>
+    </ul>
+
+<script>
+
+console.log('its workking')
+
+const proto = {
+    slogan: function(){
+        return "its good ";
+    },
+    changeName:function(newName){
+        this.name = newName
+    }
+}
+/*
+//this create an object
+let sid=Object.create(proto);
+sid.name="sidra";
+sid.age=18;
+console.log(sid)
+*/
+//this also create an object
+const sid=Object.create(proto,{
+    name:{value:"sidra",writable:true},
+    age:{value:18},
+});
+sid.changeName("$!Dr@")
+console.log(sid)
+
+function Employee(name,salary,experience){
+    this.name=name;
+    this.salary=salary;
+    this.experience=experience;
+}
+Employee.prototype.slogan=function(){
+    return `its good ,Regards , ${this.name}`;
+}
+let sidobj =new Employee("sidra",78644,8);
+console.log(sidobj)
+
+function program(name,salary,experience,language){
+    Employee.call(this,name,salary,experience);
+    this.language=language;
+}
+/*
+program.prototype.slogan=function(){
+    return `its good ,Regards , ${this.name}`;
+}
+this can be use to show slogan but the  best way is :-
+inheritance the prototype
+*/
+program.prototype=Object.create(Employee.prototype);
+// set manually the constructor
+//program.prototype.constructor = program;
+
+let rahul =new program("rahul",6,9,"html");
+console.log(rahul);
+
+
+</script>
+</body>
+</html>
